@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "virtualmmx"
+    }
+  },
+  "defaultProject": "virtualmmx",
+  "cli": {
+    "analytics": "344505c1-0aee-4b12-aaf9-7ecbc86e870e"
+  }
 }
