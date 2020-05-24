@@ -28,7 +28,7 @@ export abstract class MMXInstrument {
   }
 
   protected abstract getToneJSInstrument(): Instrument<any>;
-  public protected abstract getInstrumentName(): string;
+  public abstract getInstrumentName(): string;
 
   protected playSingleNote = (): ((time) => void) =>  {
     const instrument = this.getToneJSInstrument();

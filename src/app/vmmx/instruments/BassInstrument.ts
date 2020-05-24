@@ -3,7 +3,7 @@ import {AMSynth} from 'tone';
 import {Instrument} from 'tone/build/esm/instrument/Instrument';
 
 export class BassInstrument extends MMXInstrument {
-  public protected getInstrumentName(): string {
+  public getInstrumentName(): string {
     return `Bass ${this.note}`;
   }
 

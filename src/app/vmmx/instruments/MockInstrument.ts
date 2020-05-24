@@ -4,7 +4,7 @@ import {Instrument} from 'tone/build/esm/instrument/Instrument';
 
 export class MockInstrument extends MMXInstrument {
 
-  public protected getInstrumentName(): string {
+  public getInstrumentName(): string {
     return `Mock ${this.note}`;
   }
 

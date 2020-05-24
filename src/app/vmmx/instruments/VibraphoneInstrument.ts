@@ -4,7 +4,7 @@ import {FMSynth} from 'tone';
 
 export class VibraphoneInstrument extends MMXInstrument {
 
-  public protected getInstrumentName(): string {
+  public getInstrumentName(): string {
     return `Vibraphone ${this.note}`;
   }
 
