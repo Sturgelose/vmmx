@@ -1,0 +1,5 @@
+<div *ngFor="let pin of measure.getPins()"
+     class="pin"
+     [ngClass]="{ active: pin.isActive() }"
+     (click)="pin.toogle()">
+</div>

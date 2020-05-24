@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px black;
+
+  height: 4em;
+  width: 2em;
+
+  margin-bottom: 0.5em;
+
+}
+
+.pin {
+  height: 100%;
+  width: 100%;
+
+  border: solid 0.5px cornflowerblue;
+
+  &.active {
+    background-color: red;
+  }
+}

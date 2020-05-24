@@ -26,7 +26,11 @@ export class Channel {
     this.measures[measureIndex] = makeMeasure(measureType, { measureIndex, playNote: this.playNote });
   }
 
-  getMeasure(measureIndex: number) {
+  getMeasure(measureIndex: number): Measure {
     return this.measures[measureIndex];
+  }
+
+  getMeasures(): Array<Measure> {
+    return this.measures;
   }
 }

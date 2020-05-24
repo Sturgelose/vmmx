@@ -1,5 +1,5 @@
 import {start, Transport} from 'tone';
-import {VibraPhoneInstrument} from './instruments/VibraPhoneInstrument';
+import {VibraphoneInstrument} from './instruments/VibraphoneInstrument';
 import {BassInstrument} from './instruments/BassInstrument';
 import {MockInstrument} from './instruments/MockInstrument';
 import {MMXInstrument} from './instruments/MMXInstrument';
@@ -39,7 +39,7 @@ const DEFAULT_BPM = 120;
  */
 export class VMMX {
 
-  instruments: Array<any> = [];
+  private instruments: Array<any> = [];
 
   set bpm(bpm: number) {
     Transport.bpm.value = bpm;
@@ -68,17 +68,17 @@ export class VMMX {
       '1m': 64,
     };
 
-    this.instruments[Instruments.VIBRAPHONE_1] = new VibraPhoneInstrument('C1');
-    this.instruments[Instruments.VIBRAPHONE_2] = new VibraPhoneInstrument('D1');
-    this.instruments[Instruments.VIBRAPHONE_3] = new VibraPhoneInstrument('E1');
-    this.instruments[Instruments.VIBRAPHONE_4] = new VibraPhoneInstrument('F1');
-    this.instruments[Instruments.VIBRAPHONE_5] = new VibraPhoneInstrument('G1');
-    this.instruments[Instruments.VIBRAPHONE_6] = new VibraPhoneInstrument('A1');
-    this.instruments[Instruments.VIBRAPHONE_7] = new VibraPhoneInstrument('B1');
-    this.instruments[Instruments.VIBRAPHONE_8] = new VibraPhoneInstrument('C2');
-    this.instruments[Instruments.VIBRAPHONE_9] = new VibraPhoneInstrument('D2');
-    this.instruments[Instruments.VIBRAPHONE_10] = new VibraPhoneInstrument('E2');
-    this.instruments[Instruments.VIBRAPHONE_11] = new VibraPhoneInstrument('F2');
+    this.instruments[Instruments.VIBRAPHONE_1] = new VibraphoneInstrument('C1');
+    this.instruments[Instruments.VIBRAPHONE_2] = new VibraphoneInstrument('D1');
+    this.instruments[Instruments.VIBRAPHONE_3] = new VibraphoneInstrument('E1');
+    this.instruments[Instruments.VIBRAPHONE_4] = new VibraphoneInstrument('F1');
+    this.instruments[Instruments.VIBRAPHONE_5] = new VibraphoneInstrument('G1');
+    this.instruments[Instruments.VIBRAPHONE_6] = new VibraphoneInstrument('A1');
+    this.instruments[Instruments.VIBRAPHONE_7] = new VibraphoneInstrument('B1');
+    this.instruments[Instruments.VIBRAPHONE_8] = new VibraphoneInstrument('C2');
+    this.instruments[Instruments.VIBRAPHONE_9] = new VibraphoneInstrument('D2');
+    this.instruments[Instruments.VIBRAPHONE_10] = new VibraphoneInstrument('E2');
+    this.instruments[Instruments.VIBRAPHONE_11] = new VibraphoneInstrument('F2');
 
     this.instruments[Instruments.DRUM_KICK] = new MockInstrument('C1');
     this.instruments[Instruments.DRUM_SNARE] = new MockInstrument('C2');
@@ -93,6 +93,10 @@ export class VMMX {
 
   public getInstrument(instrumentId: Instruments): MMXInstrument {
     return this.instruments[instrumentId];
+  }
+
+  public getInstruments(): Array<MMXInstrument> {
+    return this.instruments;
   }
 
   public async start(): Promise<void> {

@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  margin-left: 1em;
+}
+
+.name {
+  writing-mode: vertical-lr;
+  height: 7em;
+}
+
+.instrument {
+  display: flex;
+  flex-direction: row;
+}

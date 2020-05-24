@@ -24,6 +24,14 @@ export class Pin {
     );
   }
 
+  public toogle(): void {
+    if (this.isActive()) {
+      this.deactivate();
+    } else {
+      this.activate();
+    }
+  }
+
   protected calculateNoteTiming(measureIndex: number, pinIndex: number): any {
     return Time({
       '1m': measureIndex ,

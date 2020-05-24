@@ -19,13 +19,17 @@ export abstract class Measure {
 
   protected constructor(
     private config: MeasureConfig,
-    private readonly pinNumber: number,
+    public readonly pinNumber: number,
   ) {
     this.setupMeasure();
   }
 
-  public getPin(pinIndex: number) {
+  public getPin(pinIndex: number): Pin {
     return this.pins[pinIndex];
+  }
+
+  public getPins(): Array<Pin> {
+    return this.pins;
   }
 
   /**

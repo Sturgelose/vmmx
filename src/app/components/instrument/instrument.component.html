@@ -1,0 +1,7 @@
+<div class="name">{{ instrument.getInstrumentName() }}</div>
+
+<div class="instrument">
+  <app-channel [channel]="instrument.getChannel(0)" [channelId]="0"></app-channel>
+
+  <app-channel [channel]="instrument.getChannel(1)" [channelId]="1"></app-channel>
+</div>

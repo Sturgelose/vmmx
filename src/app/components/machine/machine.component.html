@@ -1,0 +1,10 @@
+<button (click)="machine.start()">Start</button>
+<button (click)="machine.stop()">Stop</button>
+
+BPM: <input (change)="setBPM($event)" type="range" min="1" max="400" value="50">
+
+<div class="vmmx">
+  <app-instrument *ngFor="let instrument of machine.getInstruments()"
+                  [instrument]="instrument">
+  </app-instrument>
+</div>

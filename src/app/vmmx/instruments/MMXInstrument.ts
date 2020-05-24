@@ -27,10 +27,11 @@ export abstract class MMXInstrument {
     ];
   }
 
-  protected abstract getInstrument(): Instrument<any>;
+  protected abstract getToneJSInstrument(): Instrument<any>;
+  public protected abstract getInstrumentName(): string;
 
   protected playSingleNote = (): ((time) => void) =>  {
-    const instrument = this.getInstrument();
+    const instrument = this.getToneJSInstrument();
     return (time): void => {
       instrument.triggerAttackRelease(this.note, this.duration, time);
     };

@@ -3,7 +3,11 @@ import {MonoSynth} from 'tone';
 import {Instrument} from 'tone/build/esm/instrument/Instrument';
 
 export class BassInstrument extends MMXInstrument {
-  protected getInstrument(): Instrument<any> {
+  public protected getInstrumentName(): string {
+    return `Bass ${this.note}`;
+  }
+
+  protected getToneJSInstrument(): Instrument<any> {
     return new MonoSynth({
       oscillator: {
         type: 'fmsquare5',

@@ -1,0 +1,5 @@
+<div>Ch {{channelId}}</div>
+
+<div class="measures">
+  <app-measure *ngFor="let measure of channel.getMeasures()" [measure]="measure"></app-measure>
+</div>

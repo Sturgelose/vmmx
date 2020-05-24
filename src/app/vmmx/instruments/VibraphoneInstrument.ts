@@ -2,9 +2,13 @@ import {MMXInstrument} from './MMXInstrument';
 import {Instrument} from 'tone/build/esm/instrument/Instrument';
 import {FMSynth} from 'tone';
 
-export class VibraPhoneInstrument extends MMXInstrument {
+export class VibraphoneInstrument extends MMXInstrument {
 
-  protected getInstrument(): Instrument<any> {
+  public protected getInstrumentName(): string {
+    return `Vibraphone ${this.note}`;
+  }
+
+  protected getToneJSInstrument(): Instrument<any> {
     // https://github.com/Tonejs/Presets/blob/gh-pages/instrument/FMSynth/Kalimba.json
     return new FMSynth({
       harmonicity: 8,
