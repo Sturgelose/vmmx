@@ -9,7 +9,7 @@ import {Transport} from 'tone';
 })
 export class MachineComponent implements OnInit {
 
-  machine = new VMMX();
+  public machine = new VMMX();
 
   constructor() {}
 

@@ -45,6 +45,10 @@ export class VMMX {
     Transport.bpm.value = bpm;
   }
 
+  get bpm(): number {
+    return Transport.bpm.value;
+  }
+
   set loop(doLoop: boolean) {
     Transport.loop = doLoop;
   }
