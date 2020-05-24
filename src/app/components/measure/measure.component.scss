@@ -19,4 +19,11 @@
   &.active {
     background-color: red;
   }
+
+  &:hover {
+    border-color: coral;
+    border-width: 2px;
+    height: calc(100% - 4px);
+    width: calc(100% - 4px);
+  }
 }
