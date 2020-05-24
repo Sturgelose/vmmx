@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "vmmx-bd96a": {
+      "hosting": {
+        "virtualmmx": [
+          "vmmx-bd96a"
+        ]
+      }
+    }
+  }
+}
